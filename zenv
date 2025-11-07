@@ -5,3 +5,10 @@ mongodb_password = n2FrFamTHUcJueRE
 n2FrFamTHUcJueRE
 
 connect_string = mongodb+srv://luckymilak243_db_user:n2FrFamTHUcJueRE@cluster0.sojlnje.mongodb.net/?appName=Cluster0
+
+
+--------------------------------------------------------------------------------------------------------------------
+
+
+check: echo $env:MONGODB_URL
+set: $env:MONGODB_URL = "mongodb+srv://luckymilak243_db_user:n2FrFamTHUcJueRE@cluster0.sojlnje.mongodb.net/?appName=Cluster0"
