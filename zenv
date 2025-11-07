@@ -4,4 +4,4 @@ mongodb_password = n2FrFamTHUcJueRE
 
 n2FrFamTHUcJueRE
 
-connect_string = mongodb+srv://luckymilak243_db_user:<db_password>@cluster0.sojlnje.mongodb.net/?appName=Cluster0
+connect_string = mongodb+srv://luckymilak243_db_user:n2FrFamTHUcJueRE@cluster0.sojlnje.mongodb.net/?appName=Cluster0
