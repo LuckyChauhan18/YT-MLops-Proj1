@@ -37,7 +37,7 @@ class DataTransformationConfig:
                                                    TEST_FILE_NAME.replace("csv", "npy"))
     transformed_object_file_path: str = os.path.join(data_transformation_dir,
                                                      DATA_TRANSFORMATION_TRANSFORMED_OBJECT_DIR,
-                                                     PREPROCSSING_OBJECT_FILE_NAME)      
+                                                     PREPROCSSING_OBJECT_FILE_NAME)
     
 @dataclass
 class ModelTrainerConfig:
@@ -61,4 +61,9 @@ class ModelEvaluationConfig:
 @dataclass
 class ModelPusherConfig:
     bucket_name: str = MODEL_BUCKET_NAME
-    s3_model_key_path: str = MODEL_FILE_NAME    
+    s3_model_key_path: str = MODEL_FILE_NAME
+
+@dataclass
+class VehiclePredictorConfig:
+    model_file_path: str = MODEL_FILE_NAME
+    model_bucket_name: str = MODEL_BUCKET_NAME

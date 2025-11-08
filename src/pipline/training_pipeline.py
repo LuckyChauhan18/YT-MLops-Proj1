@@ -12,7 +12,7 @@ from src.components.model_pusher import ModelPusher
 from src.entity.config_entity import (DataIngestionConfig,
                                           DataValidationConfig,
                                           DataTransformationConfig,
-                                           ModelTrainerConfig,
+                                          ModelTrainerConfig,
                                           ModelEvaluationConfig,
                                           ModelPusherConfig)
                                           
@@ -50,7 +50,7 @@ class TrainPipeline:
             return data_ingestion_artifact
         except Exception as e:
             raise MyException(e, sys) from e
-
+        
     def start_data_validation(self, data_ingestion_artifact: DataIngestionArtifact) -> DataValidationArtifact:
         """
         This method of TrainPipeline class is responsible for starting data validation component
@@ -96,13 +96,12 @@ class TrainPipeline:
             return model_trainer_artifact
 
         except Exception as e:
-            raise MyException(e, sys) 
-        
-        
+            raise MyException(e, sys)
+
     def start_model_evaluation(self, data_ingestion_artifact: DataIngestionArtifact,
                                model_trainer_artifact: ModelTrainerArtifact) -> ModelEvaluationArtifact:
         """
-        This method of TrainPipeline class is responsible for starting model evaluation
+        This method of TrainPipeline class is responsible for starting modle evaluation
         """
         try:
             model_evaluation = ModelEvaluation(model_eval_config=self.model_evaluation_config,
@@ -111,7 +110,7 @@ class TrainPipeline:
             model_evaluation_artifact = model_evaluation.initiate_model_evaluation()
             return model_evaluation_artifact
         except Exception as e:
-            raise MyException(e, sys)  
+            raise MyException(e, sys)
 
     def start_model_pusher(self, model_evaluation_artifact: ModelEvaluationArtifact) -> ModelPusherArtifact:
         """
@@ -124,7 +123,7 @@ class TrainPipeline:
             model_pusher_artifact = model_pusher.initiate_model_pusher()
             return model_pusher_artifact
         except Exception as e:
-            raise MyException(e, sys)     
+            raise MyException(e, sys)
 
     def run_pipeline(self, ) -> None:
         """
@@ -144,6 +143,4 @@ class TrainPipeline:
             model_pusher_artifact = self.start_model_pusher(model_evaluation_artifact=model_evaluation_artifact)
             
         except Exception as e:
-            raise MyException(e, sys)  
-        
-      
+            raise MyException(e, sys)

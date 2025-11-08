@@ -52,4 +52,4 @@ class MyModel:
         return f"{type(self.trained_model_object).__name__}()"
 
     def __str__(self):
-        return f"{type(self.trained_model_object).__name__}()" 
+        return f"{type(self.trained_model_object).__name__}()"
