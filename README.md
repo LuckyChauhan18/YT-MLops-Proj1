@@ -1,5 +1,5 @@
 This is  readme file 
-# 🚗 Vehicle Epileptic Seizure Detection — MLOps End-to-End (FastAPI • Docker • AWS • CI/CD)
+# 🚗 Vehicle Insurance Purchase Prediction — MLOps End-to-End (FastAPI • Docker • AWS • CI/CD)
 
 [![Python](https://img.shields.io/badge/Python-3.10-blue.svg)](https://www.python.org/)
 [![FastAPI](https://img.shields.io/badge/API-FastAPI-009688.svg)](https://fastapi.tiangolo.com/)
