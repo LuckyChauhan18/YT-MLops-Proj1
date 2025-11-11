@@ -24,21 +24,8 @@ This is  readme file
 
 ---
 
-## 🧭 Architecture (high level)
 
-```mermaid
-flowchart LR
-    A[MongoDB Atlas\nRaw Collections] -->|Ingestion| B[Data Ingestion]
-    B --> C[Data Validation\n(schema.yaml)]
-    C --> D[Data Transformation\nFeature Engg]
-    D --> E[Model Trainer\nSVM/Sklearn]
-    E --> F[Model Evaluation\nΔ score threshold]
-    F -->|Approved| G[(S3 Model Registry\nmy-model-mlopsproj/model-registry)]
-    G --> H[FastAPI Inference Service\nDocker]
-    H --> I[(AWS ECR)]
-    I --> J[EC2 (Self-hosted Runner)\nDocker Run]
-    J -->|HTTP| K[User / Client]
-```
+
 
 ---
 
